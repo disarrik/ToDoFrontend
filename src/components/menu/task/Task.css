@@ -1,0 +1,25 @@
+.task {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.done {
+    width: 30px;
+}
+
+.taskInfo {
+    width: 100%;
+    margin: auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskNameAndDescription {
+    width: 80%;
+}
+
+.deadline {
+    width: 20%;
+    margin: auto 20px;
+}

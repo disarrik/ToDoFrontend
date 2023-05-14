@@ -1,0 +1,21 @@
+.createTaskHeader {
+    text-align: center;
+}
+
+.createTaskMenu {
+    min-width: 20%;
+}
+
+.createTaskForm {
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.createTaskForm * {
+    margin: 10px;
+}
+.createTaskForm textarea {
+    resize: vertical;
+}

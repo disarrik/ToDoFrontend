@@ -1,0 +1,71 @@
+.menu{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 1250px) {
+
+    .groupsBar{
+        height: 97vh;
+    }
+
+}
+
+@media (max-width: 1250px) {
+
+    .tasks {
+        order: 1;
+    }
+    .createTaskMenu {
+         order: 2;
+    }
+
+    .groupsBar{
+        order: 3;
+    }
+
+}
+
+.groupsBar{
+    flex-grow: 1;
+    margin: 3vh;
+    max-width: 30%;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tasks {
+    flex-grow: 40;
+    margin: 0 10px;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    box-sizing:border-box;
+}
+
+.tasks::-webkit-scrollbar{
+    display: none;
+}
+
+.createTaskForm {
+    margin: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginButton {
+    position: fixed;
+    right: 0;
+}
+
+@media (max-width: 1250px) {
+    .menu {
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const baseUrl = 'http://localhost:8080'
+import {baseUrl} from "./constants";
 
 export async function register(username, password) {
     const response = await axios.post(baseUrl + '/register', {

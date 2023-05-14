@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const baseUrl = 'http://localhost:8080'
+import {baseUrl} from "./constants";
 
 export async function getAllTasks() {
     const response = await axios.get(baseUrl + '/task', {
