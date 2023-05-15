@@ -5,7 +5,8 @@ export async function getAllTasks() {
     const response = await axios.get(baseUrl + '/task', {
         params: {
             userLogin: localStorage.getItem("username")
-        }
+        },
+        withCredentials: true
     })
     return response.data
 }
@@ -16,7 +17,8 @@ export async function markDone(taskId, done) {
             userLogin: localStorage.getItem("username"),
             taskId: taskId,
             done: done
-        }
+        },
+        withCredentials: true
     })
     return response.data
 }
@@ -27,6 +29,6 @@ export async function createTask(name, description, deadline, groupId) {
         description: description,
         deadline: deadline,
         groupId: groupId
-    })
+    }, {withCredentials: true})
     return response.status === 200
 }

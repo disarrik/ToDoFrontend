@@ -16,8 +16,8 @@ export default function CreateTaskMenu(props) {
         <div className='createTaskMenu'>
             <h1 className="createTaskHeader">Create task</h1>
             <form onSubmit={onSubmit} className="createTaskForm">
-                <input type="text" name="name" value="Title"/>
-                <textarea placeholder="Description" name="Description" rows="7"/>
+                <input type="text" name="name" placeholder="Title"/>
+                <textarea placeholder="Description" name="description" rows="7"/>
                 <input type="datetime-local" name="deadline"/>
                 <select name="groupId">
                     {props.groups?.map(
