@@ -7,11 +7,22 @@ export default function LoginMenu() {
     const navigate = useNavigate();
     const onSubmit = async (event) => {
         event.preventDefault();
-        const success = login(event.target.username.value, event.target.password.value)
-        if (success) {
-            localStorage.setItem("username", event.target.username.value)
-            navigate("/")
-        }
+        login(event.target.username.value, event.target.password.value)
+            .then(
+                r => {
+                    if (r) {
+                        console.log(1)
+                        localStorage.setItem("username", event.target.username.value)
+                        navigate("/")
+                    }
+                }
+            )
+            .catch(
+                e => {
+                    console.log(2)
+                    navigate("/login")
+                }
+            )
     }
     return(
         <div>

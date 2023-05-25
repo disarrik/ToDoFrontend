@@ -17,6 +17,7 @@ export async function createGroup(groupName) {
             name: groupName
         }, {
         withCredentials: true,
+        maxRedirects: 0
     })
     return response.data
 }
@@ -27,7 +28,8 @@ export async function inviteToGroup(groupId, userLogin) {
             groupId: groupId,
             userLogin: userLogin
         },
-        withCredentials: true
+        withCredentials: true,
+        maxRedirects: 0
     })
     return response.status === 200
 }

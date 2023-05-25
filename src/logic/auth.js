@@ -16,6 +16,11 @@ export async function login(username, password) {
                 username: username,
                 password: password
             }
-    }, {withCredentials: true})
+    },
+        {
+            withCredentials: true,
+            maxRedirects: 0
+        }
+    )
     return response.status === 200
 }
